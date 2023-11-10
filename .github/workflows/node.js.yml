@@ -8,20 +8,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v3
     - name: Test
       run: node test.js
-    - name: Release 
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "*.*"
-        body: "My release content"
-        title: "My release"

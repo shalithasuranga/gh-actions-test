@@ -1,4 +1,5 @@
-const calc =  require('./calc');
+const assert = require('assert');
+const { add } =  require('./calc');
 
 console.log('Test #1');
-assert.equal(calc(10, 5), 15);
+assert.equal(add(10, 5), 15);

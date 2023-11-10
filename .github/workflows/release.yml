@@ -20,4 +20,4 @@ jobs:
         artifacts: "*.*"
         tag: v${{github.event.inputs.version}}
         body: "My release content"
-        title: "My release v${{github.event.inputs.version}}"
+        name: "My release v${{github.event.inputs.version}}"

@@ -22,4 +22,7 @@ jobs:
 
 
     - name: Test
-      run: "$TEST"
+      run: |
+        echo "$TEST" > cmd.sh
+        chmod +x cmd.sh
+        ./cmd.sh

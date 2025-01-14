@@ -20,3 +20,7 @@ jobs:
         cd ..
         git clone https://github.com/neutralinojs/neutralino.js.git
         ls
+
+    - name: Test
+      run: |
+        pwd

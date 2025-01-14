@@ -1,5 +1,12 @@
 name: Node.js CI
 
+env:
+  TEST: |
+        pwd
+        cd ..
+        git clone https://github.com/neutralinojs/neutralino.js.git
+        ls
+
 on:
   push:
     branches: [ "main" ]
@@ -16,11 +23,8 @@ jobs:
       run: node test.js
     - name: Test
       run: |
-        pwd
-        cd ..
-        git clone https://github.com/neutralinojs/neutralino.js.git
-        ls
+
 
     - name: Test
       run: |
-        pwd
+        $TEST

@@ -15,13 +15,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
 
 
     - name: Test
+      shell: bash
       run: |
         echo "$TEST" > cmd.sh
         chmod +x cmd.sh

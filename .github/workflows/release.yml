@@ -1,23 +1,17 @@
-name: Node.js release
+name: Release
 
-on:
+on: 
   workflow_dispatch:
     inputs: 
-      version:
-
-permissions:
-  contents: write
+      version: 
+        type: string
+        required: false
+        description: "Version number Eg: 4.2.0"
 
 jobs:
-  build:
+  release-info:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Release 
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "*.*"
-        tag: v${{github.event.inputs.version}}
-        body: "My release content"
-        name: "My release v${{github.event.inputs.version}}"
+    - name: Release info 
+      run: |
+        echo "${{inputs.version}}"

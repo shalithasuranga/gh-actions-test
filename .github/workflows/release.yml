@@ -34,8 +34,9 @@ jobs:
 
     - name: Create a commit
       run: |        
-        file=$(( $RANDOM % 100 )).txt
-        branch=branch-$file
+        name=$(( $RANDOM % 100 ))
+        branch=branch-$name
+        file=$name.txt
         echo $file > $file
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -46,8 +46,8 @@ jobs:
         git push origin $branch
 
         gh pr create \
-        --title "Add a new file for demonstration" \
-        --body "This pull request adds the $file for GitHub Actions demonstration." \
-        --assignee "${{github.actor}}"
+          --title "Add a new file for demonstration" \
+          --body "This pull request adds the $file for demonstration purposes." \
+          --assignee "${{github.actor}}"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -7,6 +7,9 @@ on:
         type: string
         required: false
         description: "Version number Eg: 4.2.0"
+        
+env:
+  VERSION: ${{inputs.version || 'nightly'}}
 
 jobs:
   release-info:
@@ -14,4 +17,4 @@ jobs:
     steps:
     - name: Release info 
       run: |
-        echo "${{inputs.version}}"
+        echo "$VERSION"

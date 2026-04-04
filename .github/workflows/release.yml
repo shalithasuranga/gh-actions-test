@@ -31,3 +31,12 @@ jobs:
         git push origin $VERSION
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create a commit
+      run: |
+        file="$(( $RANDOM % 100 )).txt"
+        git add $file
+        git commit -m "Add $file"
+        git push origin $VERSION
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

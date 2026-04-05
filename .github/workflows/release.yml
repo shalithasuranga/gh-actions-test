@@ -25,6 +25,8 @@ jobs:
         echo "$VERSION"
     - name: Create a new branch for the release
       run: |
+        git branch -a
+        echo "-----"
         if git ls-remote --exit-code --heads origin $VERSION; then
           git push origin -d $VERSION
         fi

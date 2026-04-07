@@ -50,7 +50,7 @@ jobs:
 
         gh pr create \
           --title "Add a new file for demonstration" \
-          --body "This pull request adds the $file for demonstration purposes." \
+          --body "This pull request adds the $file file for demonstration." \
           --assignee "${{github.actor}}"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
